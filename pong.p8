@@ -15,6 +15,8 @@ lives = 3
 colpad = 15
 colball = 15
 colzone = 3
+colscore1 = 15
+colscore2 = 15
 
 function movepaddle()
 	if btn(0) then
@@ -61,6 +63,8 @@ function bouncepaddle()
 		colball= rnd(15)
 		colpad= rnd(15)
 		colzone= rnd(15)
+		colscore1= rnd(15)
+		colscore2= rnd(15)
 	end
 end
 
@@ -84,8 +88,8 @@ end
 
 function _draw()
 	rectfill(0, 0, 128, 128, colzone)
-	print(score, 12, 6, 15)
-	print(lives, 100, 6, 15)
+	print(score, 12, 6, colscore1)
+	print(lives, 100, 6, colscore2)
 	rectfill(padx, pady, padx+padw, pady+padh, colpad)
 	circfill(ballx, bally, ballsize, colball)
 end
